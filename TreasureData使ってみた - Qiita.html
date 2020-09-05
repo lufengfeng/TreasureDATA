@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://qiita.com/akito1986/items/4c83ff492ed4b390ad50 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>TreasureData使ってみた - Qiita</title><meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport"><meta content="#55c500" name="theme-color"><meta content="XWpkTG32-_C4joZoJ_UsmDUi-zaH-hcrjF6ZC_FoFbk" name="google-site-verification"><link href="https://qiita.com/manifest.json" rel="manifest"><link href="https://qiita.com/opensearch.xml" rel="search" title="Qiita" type="application/opensearchdescription+xml"><meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="6DNNIv1SQYWRhOcv1Wan/5RpAOO71GgTsd7CBCEzjtcR5lp1lX83/4ZxZQVEyhtsNVLrfz+4HY28NdCm4QFLEg=="><link rel="shortcut icon" type="image/x-icon" href="https://cdn.qiita.com/assets/favicons/public/production-c620d3e403342b1022967ba5e3db1aaa.ico"><link rel="apple-touch-icon" type="image/png" href="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-ec5ba42a24ae923f16825592efdc356f.png"><link rel="stylesheet" media="all" href="./TreasureData使ってみた - Qiita_files/style-92b4d72e7818f86521d54fee1fcd9d82.min.css"><script async="" src="./TreasureData使ってみた - Qiita_files/saved_resource"></script><script async="" charset="utf-8" src="./TreasureData使ってみた - Qiita_files/pixel"></script><script async="" src="./TreasureData使ってみた - Qiita_files/lt.js.ダウンロード"></script><script charset="utf-8" async="" src="./TreasureData使ってみた - Qiita_files/pixel2.js.ダウンロード"></script><script async="" src="./TreasureData使ってみた - Qiita_files/saved_resource(1)"></script><script async="" src="./TreasureData使ってみた - Qiita_files/pixel.js.ダウンロード"></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/segmentation.js.ダウンロード"></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/segmentation.js.ダウンロード"></script><script async="" src="./TreasureData使ってみた - Qiita_files/uwt.js.ダウンロード"></script><script src="./TreasureData使ってみた - Qiita_files/osd.js.ダウンロード"></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/f(4).txt"></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/f(4).txt"></script><script async="" src="./TreasureData使ってみた - Qiita_files/gtm.js.ダウンロード"></script><script type="text/javascript" src="./TreasureData使ってみた - Qiita_files/combo" async=""></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/analytics.js.ダウンロード"></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/js"></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/f(4).txt"></script><script async="">window.a1tracker&&a1tracker.ready(function(tracker){var doh="ff9a3577423c8ed5";if(!doh)return;var params={"event":"","url":"","referrer":"","metakeywords":"","callback":""};if(params.url)tracker.setParams(doh,"url",params.url);if(params.referrer)tracker.setParams(doh,"referrer",params.referrer);if(params.metakeywords){var mk=tracker.getParams(doh,"metakeywords");Array.prototype.push.apply(mk,params.metakeywords.split(","));tracker.setParams(doh,"metakeywords",mk)}tracker.setParams(doh,"tagsource","itm_a1common");var callback=params.callback&&typeof window[params.callback]==="function"?function(err,data){if(!err&&data.segments.length>0)window[params.callback](data.segments);return}:function(){};if(params.event)tracker.send(doh,params.event.split(","),callback);else tracker.send(doh,callback)});</script><script async="" src="./TreasureData使ってみた - Qiita_files/tracking.min.js.ダウンロード"></script><script src="./TreasureData使ってみた - Qiita_files/1469129556533591" async=""></script><script src="./TreasureData使ってみた - Qiita_files/2040876882868599" async=""></script><script src="./TreasureData使ってみた - Qiita_files/1733466696949178" async=""></script><script src="./TreasureData使ってみた - Qiita_files/386990638325508" async=""></script><script src="./TreasureData使ってみた - Qiita_files/256605841418458" async=""></script><script src="./TreasureData使ってみた - Qiita_files/262978464137256" async=""></script><script src="./TreasureData使ってみた - Qiita_files/437265843064161" async=""></script><script src="./TreasureData使ってみた - Qiita_files/954575148009345" async=""></script><script src="./TreasureData使ってみた - Qiita_files/996402550503199" async=""></script><script src="./TreasureData使ってみた - Qiita_files/809797712462041" async=""></script><script src="./TreasureData使ってみた - Qiita_files/1792588824374455" async=""></script><script async="" src="./TreasureData使ってみた - Qiita_files/fbevents.js.ダウンロード"></script><script async="" src="./TreasureData使ってみた - Qiita_files/ff9a3577423c8ed5_4330.js.ダウンロード"></script><script type="text/javascript" async="" src="./TreasureData使ってみた - Qiita_files/td.min.js.ダウンロード"></script><script src="./TreasureData使ってみた - Qiita_files/v3-article-bundle-c19ac4ead55f3f90afb8ca5485d30a6e.min.js.ダウンロード" defer="defer"></script><meta name="twitter:card" content="summary_large_image"><meta content="@Qiita" name="twitter:site"><meta content="@akito1986" name="twitter:creator"><meta property="og:type" content="article"><meta property="og:title" content="TreasureData使ってみた - Qiita"><meta property="og:image" content="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-1.2.2&amp;w=1200&amp;mark=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-1.2.2%26w%3D840%26h%3D380%26txt%3DTreasureData%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Df3136c25ae412d17304ed4e94007fb48&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-1.2.2%26w%3D840%26h%3D500%26txt%3D%2540akito1986%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3Dbcc27992d502be4b2726b4fb86d1b00e&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=f067951f25555caec4be6ca96feee856"><meta property="og:description" content="treasuredataを使ってみたのでメモメモ。
+
+
+背景
+
+使う契機とは直接関係はないけどログについて、色々思うところがあった。
+
+色々思うところとは・・・
+
+
+ログは重要
+ログは管理が大変
+ログは消したくない
+ログのフォーマット..."><meta content="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50" property="og:url"><meta content="Qiita" property="og:site_name"><meta content="564524038" property="fb:admins"><meta content="log,TreasureData" name="keywords"><style data-styled="active" data-styled-version="5.0.1"></style><script>window.frtn=window.frtn||function(){ (frtn.q=frtn.q||[]).push(arguments) };
+frtn("init",{
+service_id:"cova_248",
+site_id:"site_134",
+tag_id:"tag_283"
+});
+frtn("send","pageview");</script><script defer="" src="./TreasureData使ってみた - Qiita_files/insight.js.ダウンロード" type="text/javascript"></script><script>!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["blockEvents","unblockEvents","setSignedMode","setAnonymousMode","resetUUID","addRecord","fetchGlobalID","set","trackEvent","trackPageview","trackClicks","ready"],n=0;n<s.length;n++){var c=s[n];e[t].prototype[c]=r(c)}var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/2.1/td.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)}}("Treasure",this);
+
+// Configure an instance for your database
+var td = new Treasure({
+  host: 'in.treasuredata.com',
+  writeKey: '10614/e3887673c1849754466b09ad01b4fbbc22b88f30',
+  database: 'qiita_public',
+  startInSignedMode: true
+});
+
+// Enable cross-domain tracking
+td.set('$global', 'td_global_id', 'td_global_id');
+// Track pageview information to 'pageviews' table
+td.set('pageviews_all', {"query_parameters":{},"path_parameters":{"controller":"public/items","action":"show","user_id":"akito1986","type":"items","id":"4c83ff492ed4b390ad50"},"user_id":null})
+td.trackPageview('pageviews_all');</script><script src="./TreasureData使ってみた - Qiita_files/js(1)"></script><style data-jss="" data-meta="MuiTooltip">
+.MuiTooltip-popper {
+  flip: false;
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  flip: false;
+  left: 0;
+  width: 2em;
+  height: 1em;
+  margin-top: -0.95em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  flip: false;
+  left: 0;
+  width: 2em;
+  bottom: 0;
+  height: 1em;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.95em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  flip: false;
+  left: 0;
+  width: 1em;
+  height: 2em;
+  margin-top: 4px;
+  margin-left: -0.95em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  flip: false;
+  right: 0;
+  width: 1em;
+  height: 2em;
+  margin-top: 4px;
+  margin-right: -0.95em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: transparent transparent transparent currentcolor;
+  border-width: 1em 0 1em 1em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: transparent currentcolor transparent transparent;
+  border-width: 1em 1em 1em 0;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: currentcolor transparent transparent transparent;
+  border-width: 1em 1em 0 1em;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: transparent transparent currentcolor transparent;
+  border-width: 0 1em 1em 1em;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  position: absolute;
+  font-size: 6px;
+}
+.MuiTooltip-arrow::before {
+  width: 0;
+  height: 0;
+  margin: auto;
+  content: "";
+  display: block;
+  border-style: solid;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+</style><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    skipStartupTypeset: true,
+    showProcessingMessages: false,
+    tex2jax: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']],
+      processEscapes: true,
+      processEnvironments: false,
+      processRefs: false,
+      skipTags: ['script','noscript','style','textarea','pre','code','a','h1','h2','h3','h4','h5','h6']
+    }
+   })</script><script src="./TreasureData使ってみた - Qiita_files/gpt.js.ダウンロード"></script><script src="./TreasureData使ってみた - Qiita_files/pubads_impl_2020082701.js.ダウンロード" async=""></script><link rel="preload" href="./TreasureData使ってみた - Qiita_files/f(5).txt" as="script"><script type="text/javascript" src="./TreasureData使ってみた - Qiita_files/f(5).txt"></script><link rel="preload" href="./TreasureData使ってみた - Qiita_files/f(6).txt" as="script"><script type="text/javascript" src="./TreasureData使ってみた - Qiita_files/f(6).txt"></script><script src="./TreasureData使ってみた - Qiita_files/f(7).txt"></script><script src="./TreasureData使ってみた - Qiita_files/f(8).txt"></script><script src="./TreasureData使ってみた - Qiita_files/f(9).txt"></script><script src="./TreasureData使ってみた - Qiita_files/f(10).txt"></script><script src="./TreasureData使ってみた - Qiita_files/f(11).txt"></script></head><body><div class="allWrapper"><div class="st-HeaderContainer"><div id="GlobalHeader-react-component-bde49935-a4b0-440b-8376-90b39797ac2a"><div class="st-Header"><div class="st-Header_container"><div class="st-Header_start"><a href="https://qiita.com/" class="st-Header_logo mr-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.57 130"><circle cx="167.08" cy="21.4" r="12.28"></circle><path d="M250.81 29.66h23.48v18.9h-23.48z"></path><path d="M300.76 105.26a22.23 22.23 0 01-6.26-.86 12.68 12.68 0 01-5.17-3 14.41 14.41 0 01-3.56-5.76 28 28 0 01-1.3-9.22V48.56h29.61v-18.9h-29.52V3.29h-20.17v83.34q0 11.16 2.83 18.27a27.71 27.71 0 007.7 11.2 26.86 26.86 0 0011.43 5.62 47.56 47.56 0 0012.34 1.53h15.16v-18zM0 61.7a58.6 58.6 0 015-24.21A62.26 62.26 0 0118.73 17.9 63.72 63.72 0 0139 4.78 64.93 64.93 0 0164 0a65 65 0 0124.85 4.78 64.24 64.24 0 0120.38 13.12A62 62 0 01123 37.49a58.6 58.6 0 015 24.21 58.34 58.34 0 01-4 21.46 62.8 62.8 0 01-10.91 18.16l11.1 11.1a10.3 10.3 0 010 14.52 10.29 10.29 0 01-14.64 0l-12.22-12.41a65 65 0 01-15.78 6.65 66.32 66.32 0 01-17.55 2.3 64.63 64.63 0 01-45.23-18A62.82 62.82 0 015 85.81 58.3 58.3 0 010 61.7zm21.64.08a43.13 43.13 0 0012.42 30.63 42.23 42.23 0 0013.43 9.09A41.31 41.31 0 0064 104.8a42 42 0 0030-12.39 42.37 42.37 0 009-13.64 43.43 43.43 0 003.3-17 43.77 43.77 0 00-3.3-17A41.7 41.7 0 0080.55 22 41.78 41.78 0 0064 18.68 41.31 41.31 0 0047.49 22a42.37 42.37 0 00-13.43 9.08 43.37 43.37 0 00-12.42 30.7zM331.89 78a47.59 47.59 0 013.3-17.73 43.22 43.22 0 019.34-14.47A44.25 44.25 0 01359 36a47.82 47.82 0 0118.81-3.58 42.72 42.72 0 019.26 1 46.5 46.5 0 018.22 2.58 40 40 0 017 3.84 44.39 44.39 0 015.71 4.63l1.22-9.47h17.35v85.83h-17.35l-1.17-9.42a42.54 42.54 0 01-5.84 4.67 43.11 43.11 0 01-7 3.79 44.86 44.86 0 01-8.17 2.59 43 43 0 01-9.22 1A47.94 47.94 0 01359 119.9a43.3 43.3 0 01-14.47-9.71 44.17 44.17 0 01-9.34-14.47 47 47 0 01-3.3-17.72zm20.27-.08a29.16 29.16 0 002.17 11.34 27 27 0 005.92 8.88 26.69 26.69 0 008.76 5.76 29.19 29.19 0 0021.44 0 26.11 26.11 0 008.72-5.76 27.57 27.57 0 005.88-8.84 29 29 0 002.16-11.38 28.62 28.62 0 00-2.16-11.22 26.57 26.57 0 00-5.93-8.8 27.68 27.68 0 00-19.51-7.9 28.29 28.29 0 00-10.77 2.05 26.19 26.19 0 00-8.71 5.75 27.08 27.08 0 00-5.84 8.8 28.94 28.94 0 00-2.13 11.31zm-194.97-30.5h19.78v73.54h-19.78zm49.25 0h19.78v73.54h-19.78z"></path><circle cx="216.33" cy="21.4" r="12.28"></circle></svg></a><div><div class="st-Header_realmSelector" tabindex="0"><span class="fa fa-fw fa-caret-down"></span></div><div class="st-Header_dropdown st-RealmSelector"><div class="st-RealmSelector_realms"><a class="st-Header_dropdownItem st-RealmItem" href="https://qiita.com/"><div class="st-RealmItem_statusIcon"><span class="fa fa-fw fa-check"></span></div><div class="st-RealmItem_humanName">Qiita</div></a></div><hr><div class="st-RealmSelector_supplements"><div class="st-RealmSelector_label">ログイン中のチームがありません</div><a href="https://teams-center.qiita.com/find_team" class="st-Header_dropdownItem st-RealmSelectorSupplement"><div class="st-RealmSelectorSupplement_icon"><span class="fa fa-fw fa-sign-in"></span></div><div>Qiita Team にログイン...</div></a></div></div></div><div><div class="st-Header_community" tabindex="0">コミュニティ<span class="fa fa-fw fa-caret-down ml-1of2"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/users" class="st-Header_dropdownItem"><span class="fa fa-fw fa-users mr-1of2"></span>ユーザー一覧</a><a href="https://qiita.com/organizations" class="st-Header_dropdownItem"><span class="fa fa-fw fa-building-o mr-1of2"></span>Organization一覧</a><a href="https://qiita.com/advent-calendar" class="st-Header_dropdownItem"><span class="fa fa-fw fa-calendar mr-1of2"></span>アドベントカレンダー</a><div class="st-Header_dropdownSeparator"></div><a href="https://jobs.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=header" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-search mr-1of2"></span>Qiita Jobs</a><a href="https://qiitadon.com/" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-comments-o mr-1of2"></span>Qiitadon (β)</a><a href="https://zine.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=header" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-newspaper-o mr-1of2"></span>Qiita Zine</a><div class="st-Header_dropdownSeparator"></div><a href="https://help.qiita.com/ja/articles/qiita-community-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span>コミュニティガイドライン</a><a href="https://help.qiita.com/ja/articles/qiita-article-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span>良い記事を書くために</a><a href="https://qiita.com/release-notes" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span>リリースノート</a></div></div><form class="st-Header_search" action="https://qiita.com/search" method="get"><span class="fa fa-search"></span><input type="search" class="st-Header_searchInput" autocomplete="off" placeholder="キーワードを入力" value="" name="q" required=""></form><div class="st-Header_searchButton"><span class="fa fa-search"></span></div></div><div class="st-Header_end"><a class="st-Header_signupButton" href="https://qiita.com/signup?redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50">ユーザ登録</a><a class="st-Header_loginLink" href="https://qiita.com/login?redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50">ログイン</a></div><div class="st-Header_overlay"></div><form class="st-Header_searchModal" action="https://qiita.com/search" method="get"><input type="text" class="st-Header_searchModalInput" autocomplete="off" placeholder="キーワードを入力" value="" name="q" required=""></form></div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="GlobalHeader" data-dom-id="GlobalHeader-react-component-bde49935-a4b0-440b-8376-90b39797ac2a">{"unreadNotificationsCount":null,"realms":[{"humanName":"Qiita","isCurrentRealm":true,"isQiita":true,"isQiitaTeam":false,"loggedInUser":null,"teamId":null,"url":"https://qiita.com/"}],"teamFindUrl":"https://teams-center.qiita.com/find_team","isTeamOnlyUser":null,"currentUser":null}</script>
+      
+</div><div class="st-HeaderAlert st-HeaderAlert-warning"><div class="st-HeaderAlert_body"></div></div><script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"/","name":"Qiita"}},{"@type":"ListItem","position":2,"item":{"@id":"/tags/%23%3CQiita::Graph::Result:0x00000000068cb3c8%3E","name":"log"}}]}</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","datePublished":"2014-08-13T23:19:14.000+09:00","dateModified":"2014-08-13T23:25:53.000+09:00","headline":"TreasureData使ってみた","image":"https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-1.2.2\u0026w=1200\u0026mark=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-1.2.2%26w%3D840%26h%3D380%26txt%3DTreasureData%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3Df3136c25ae412d17304ed4e94007fb48\u0026mark-align=center%2Cmiddle\u0026blend=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-1.2.2%26w%3D840%26h%3D500%26txt%3D%2540akito1986%26txt-color%3D%2523333%26txt-font%3DHiragino%2520Sans%2520W6%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3Dbcc27992d502be4b2726b4fb86d1b00e\u0026blend-align=center%2Cmiddle\u0026blend-mode=normal\u0026s=f067951f25555caec4be6ca96feee856","mainEntityOfPage":"https://qiita.com/akito1986/items/4c83ff492ed4b390ad50","author":{"@type":"Person","address":null,"email":null,"identifier":"akito1986","name":"akito1986","image":"https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fprofile-images%2F1473690659?ixlib=rb-1.2.2\u0026auto=compress%2Cformat\u0026lossless=0\u0026w=75\u0026s=301375ae01b544ba92f0ce74db1d8460","url":"https://qiita.com/akito1986","description":null,"memberOf":[]},"publisher":{"@type":"Organization","name":"Qiita","logo":{"@type":"ImageObject","url":"//cdn.qiita.com/assets/public/qiita-logo-green-36e6153054916b1d8ed7fc47163039da.png"}}}</script><script>td.trackEvent('pageviews_article',{
+    user_id: "",
+    article_id: "110496",
+    article_uuid: "4c83ff492ed4b390ad50",
+    td_description: "&quot;treasuredataを使ってみたのでメモメモ。\n\n## 背景\n使う契機とは直接関係はないけどログについて、色々思うところがあった。\n\n色々思うところとは・・・\n\n* ログは重要\n* ログは管理が大変\n* ログは消したくない\n* ログのフォーマットは変更されやすい\n\nである。\n\n「ログは重要」は、アプリケーションエンジニアのみならず情報系のエンジニアなら同意してくれると思う。\n「えっこれ動かないんだけど？」って言われたときにまず見るのがログだもの。\n\n「ログは管理が大変」は「ログは重要」のためもあるのだが、重要だからこそ消したくなく、どんどん増え続けてしまいディスクがいっぱいになっても、消したくないからテープに書き出し保存するってことが往々にしてある。\n\n「ログは消したくない」は「ログは管理が大変」で記載してしまった。。。\n\n「ログのフォーマットは変更されやすい」は、まあシステムをステップ開発する場合は往々にしてある。システムに対する習熟度が上がるとフォーマットも変えたくなる。\n\nS3とかのクラウドストレージに入れればええやん？とかも思ったけど、問題発生時にはログを手元にもってきて、ログ解析・・・億劫と思ってしまう自分がいた。\n\nまあそんな中、真剣に何かを使いたいと思っていたわけではないのだけど縁があってTreasureDataを使う機会があったので、主にログ管理システムとしてどうなんだろうと思って触ってみたので、備忘のためにメモしておく。\n\n今回は環境準備まで。\n\n以下環境情報。\n\n* ubuntu: 12.04\n* ruby: 2.1.2p95\n* rubygem: 2.2.2\n\n\n## TreasureDataとは\nwikiとかあればいいんだけど無さげなので、一言で言うとクラウド上にあるデータベースと思ってもらえればいい気がする。ただ大容量データを解析するためにクエリはHadoop使えまっせって感じ。\n\n## SignUp\nAWS上にある[WebConsole](https://console.treasuredata.com/users/sign_up)で無料でサインアップができ、早速使い始められる。\n\n![td_signup.png](https://qiita-image-store.s3.amazonaws.com/0/46472/cd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png \u0026amp;quot;td_signup.png\u0026amp;quot;)\n\n## APIキーの取得\nアプリケーションから利用するために必要なAPIキーを取っておく。\nWebConsoleからログイン後、\n![td_signin.png](https://qiita-image-store.s3.amazonaws.com/0/46472/5cd69e77-1c32-c915-ec7d-be7c6561e591.png \u0026amp;quot;td_signin.png\u0026amp;quot;)\n\n画面右上のプルダウンメニュから`My Profile`を選択。\n\n![td_get_apikey.png](https://qiita-image-store.s3.amazonaws.com/0/46472/d8e02fee-8354-547c-01c4-b22c0ae7126c.png \u0026amp;quot;td_get_apikey.png\u0026amp;quot;)\n\n`My Profile`画面で`API Keys`のテキストボックスに`my_td_password`を入力後`Show Keys`タブを選択する。\n\nそうするとAPIキーが表示されるのでメモしておく。\n\n## TreasureData Tool Beltのインストール\nTool Beltって一般的なのかな？まあRubyBaseのCLIのクライアントツールである。\nWebConsoleでもログのアップロードやクエリを投げられるけど、基本はこのTool BeltやJDBC、RestAPI経由で使うと思う。\n\n以下のコマンドで`TD Tool Belt`をインストールする。\n\n```cmd:install_td\n$ gem install td\n$ td --version\n0.11.3\n$ \n```\n\n## 使ってみる\n### 環境変数設定\n以下のコマンドでTreasureDataのAPIエンドポイントを指定する。\n\n```cmd:set_env\n$ export TD_API_SERVER=https://api.treasuredata.com\n$ env | grep TD\nTD_API_SERVER=https://api.treasuredata.com\n```\n\n### ログイン\n`TD Tool Belt`経由でTreasureDataにログインする。\n\n```cmd:login_td\n$ td account -f\nEnter your Treasure Data credentials.\nEmail: ${my_addr}\nPassword (typing will be hidden): ${my_passwd} \nAuthenticated successfully.\nUse \u0026amp;#39;td db:create \u0026amp;lt;db_name\u0026amp;gt;\u0026amp;#39; to create a database.\n$\n````\n\n### クエリ実行\nTreasureDataではサンプルデータが用意されている。\n\n```cmd:td_db\n$ td db:list # DB一覧表示\n+-------------+-------+\n| Name        | Count |\n+-------------+-------+\n| sample_db   | 5000  |\n+-------------+-------+\n1 rows in set\n$ td table:list sample_db # テーブル一覧表示\n+-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+\n| Database  | Table      | Type | Count | Size   | Last import               | Last log timestamp        | Schema                                                                                                   |\n+-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+\n| sample_db | www_access | log  | 5,000 | 0.0 GB | 2014-03-14 01:12:32 +0900 | 2013-09-07 10:13:45 +0900 | host:string, path:string, method:string, referer:string, code:long, agent:string, user:string, size:long |\n+-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+\n1 row in set\n$\n```\n\n`sample_db.www_access`のレコード数を取得するクエリを以下で実行することができる。\n\n```cmd:td_query\n$ td query -w -t hive -d sample_db \u0026amp;quot;SELECT COUNT(1) FROM www_access\u0026amp;quot;\nJob 13623610 is queued.\nUse \u0026amp;#39;td job:show 13623610\u0026amp;#39; to show the status.\nqueued...\n  started at 2014-08-13T14:15:54Z\n  14/08/13 14:16:00 WARN conf.Configuration: org.apache.hadoop.hive.conf.LoopingByteArrayInputStream@5adeeabd:an attempt to override final parameter: mapreduce.input.fileinputformat.split.minsize;  Ignoring.\n  Hive history file=/mnt/hive/tmp/4115/hive_job_log_e8d443fc-5e93-4ff0-a53a-983786540afc_1000320679.txt\n  Total jobs = 1\n  Launching Job 1 out of 1\n  Number of reduce tasks determined at compile time: 1\n  In order to change the average load for a reducer (in bytes):\n    set hive.exec.reducers.bytes.per.reducer=\u0026amp;lt;number\u0026amp;gt;\n  In order to limit the maximum number of reducers:\n    set hive.exec.reducers.max=\u0026amp;lt;number\u0026amp;gt;\n  In order to set a constant number of reducers:\n    set mapreduce.job.reduces=\u0026amp;lt;number\u0026amp;gt;\n  **\n  ** WARNING: time index filtering is not set!\n  ** This query could be very slow as a result.\n  ** Please see http://docs.treasure-data.com/articles/performance-tuning#leveraging-time-based-partitioning\n  **\n  Starting Job = job_1407740893231_6027, Tracking URL = http://ip-10-145-145-114.ec2.internal:8088/proxy/application_1407740893231_6027/\n  Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1407740893231_6027\n  Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1\n  2014-08-13 14:16:13,982 Stage-1 map = 0%,  reduce = 0%\n  2014-08-13 14:16:21,301 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 12.64 sec\n  2014-08-13 14:16:27,550 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 14.66 sec\n  finished at 2014-08-13T14:16:31Z\n  MapReduce Total cumulative CPU time: 14 seconds 660 msec\n  Ended Job = job_1407740893231_6027\n  MapReduce Jobs Launched: \n  Job 0: Map: 1  Reduce: 1   Cumulative CPU: 14.66 sec   HDFS Read: 2574 HDFS Write: 104 SUCCESS\n  Total MapReduce CPU Time Spent: 14 seconds 660 msec\n  OK\n  MapReduce time taken: 24.295 seconds\n  Fetching results...\n  Total CPU Time: 14660\n  Time taken: 24.663 seconds\nStatus     : success\nResult     :\nWARNING: the job result is being downloaded...: 24 B / 100.0%                                                                                                   +------+                                          \n| _c0  |\n+------+\n| 5000 |\n+------+\n1 row in set\n$\n```\n\nデータ件数が5000件あることがわかる。そして裏では`map reduces`処理がはしっているっぽいことがわかる。\n\nデータインポート部分については次回！！\n&quot;",
+    td_title: "&quot;TreasureData使ってみた&quot;"
+  })</script><style type="text/css">.wb-CampaignLink {
+  background-color: #333333;
+  width: 100%;
+}
+
+.wb-CampaignLink_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 13px;
+  padding: 0.8em;
+
+}
+.wb-CampaignLink_container > a {
+  color: #fff;
+}
+
+.wb-CampaignLink_container > a:hover {
+  text-decoration: underline;
+}</style><style type="text/css">.wb-CampaignLink {
+  background-color: #333333;
+  width: 100%;
+}
+
+.wb-CampaignLink_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 13px;
+  padding: 0.8em;
+
+}
+.wb-CampaignLink_container > a {
+  color: #fff;
+}
+
+.wb-CampaignLink_container > a:hover {
+  text-decoration: underline;
+}</style><div class="wb-CampaignLink"><div class="wb-CampaignLink_container"><a target="_blank" href="https://jobs.qiita.com/campaigns/celebration/2020aug?utm_source=qiita&amp;utm_medium=header&amp;utm_campaign=jobseeker_202008&amp;utm_content=text1">Qiita Jobsで転職するともらえる、お祝い金30万円プレゼントキャンペーン実施中！</a><a target="_blank" href="https://jobs.qiita.com/campaigns/celebration/2020aug?utm_source=qiita&amp;utm_medium=header&amp;utm_campaign=jobseeker_202008&amp;utm_content=text1">詳しくはこちら</a></div></div><script async="" src="./TreasureData使ってみた - Qiita_files/qiita_bigmining.js.ダウンロード"></script><div style="display:none"><div class="TagList__label"><span></span><span>log</span></div><div class="TagList__label"><span></span><span>TreasureData</span></div></div><img style="display:block;margin:0;padding:0;border:0;outline:0;width:0;height:0;line-height:0;" alt="" src="./TreasureData使ってみた - Qiita_files/bizmatrix"><script type="application/json" id="js-react-on-rails-context">{"railsEnv":"production","inMailer":false,"i18nLocale":"ja","i18nDefaultLocale":"en","href":"https://qiita.com/akito1986/items/4c83ff492ed4b390ad50","location":"/akito1986/items/4c83ff492ed4b390ad50","scheme":"https","host":"qiita.com","port":null,"pathname":"/akito1986/items/4c83ff492ed4b390ad50","search":null,"httpAcceptLanguage":"ja,en;q=0.9,en-US;q=0.8","actionPath":"public/items#show","settings":{"analyticsTrackingId":"UA-24675221-12","assetsMap":{},"csrfToken":"szvoVpmLf36lGm0n6gsE0UKpG8ncAEX1ReYV1Uj+VPtK7v8B8aYJBLLv7w17p7hC45LwVVhsMGtIDQd3iMyRPg==","locale":"ja"},"currentUser":null,"isLoggedIn":false,"recaptchaSiteKey":"6LfNkiQTAAAAAM3UGnSquBy2akTITGNMO_QDxMw6","serverSide":false}</script>
+<div id="PersonalArticlePage-react-component-6f8949ea-d4d5-443c-8c28-d339c0191142"><div class="p-items"><div class="p-items_wrapper"><div class="p-items_container"><div class="it-Actions p-items_stickyMenu"><div class="it-Actions_item it-Actions_item-like likable"><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50/likers" class="it-Actions_likeCount">13</a><button title="Looks Good To Me!" class=""><svg size="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392.81 429" color="#55C500" class="VerticalLgtmIcon__Lgtm-sc-19v9h1n-0 jMUuwd"><path d="M14.19 5.4h53.86v149.45h90.05v44.87H14.19zM288.4 93.77h100.79q1.29 25-5.66 45.39a96.79 96.79 0 01-20.33 34.89 92 92 0 01-32.13 22.45 104 104 0 01-40.95 7.93 109.71 109.71 0 01-76-29.92 104.05 104.05 0 01-23-32.56 95.46 95.46 0 01-8.47-39.88 94.78 94.78 0 018.47-39.87 104.38 104.38 0 0123-32.42A107.71 107.71 0 01248.23 8a110.79 110.79 0 01118.48 22.49l-35.07 35.08a51.25 51.25 0 00-17.75-15 52.83 52.83 0 00-44.67-1.23 52.92 52.92 0 00-17 12 57.07 57.07 0 00-11.45 18.11 60 60 0 00-4.23 22.77 60 60 0 004.23 22.68 56.57 56.57 0 0011.45 18.19 52.62 52.62 0 0017 12 50.5 50.5 0 0020.9 4.36q20.19 0 31.07-7.51a35.75 35.75 0 0014.46-20.55h-47.39zM51.29 279.55H0v-44.86h156v44.86h-51.13V429H51.29zM283.36 381.71l-41.72-62V429h-53.86V234.69h47.47L290 312l55.9-77.29h46.9V429h-53.86V320.27l-42.43 61.44z"></path></svg></button></div><div class="it-Actions_item"><button title="ストック" class="ArticleStickyMenuStockButton__StockButton-zc1u4a-0 bwruJP"><span class="ArticleStickyMenuStockButton__StockButtonContainer-zc1u4a-1 ePAInp"><svg size="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353.02 398" class="StockIcon__Stock-cq5opj-0 jnleGS"><path d="M176.72 398c-67.52 0-130.16-29-171.84-79.69l-4.46-5.42V78.05H353v234.84l-4.45 5.42C306.88 369 244.24 398 176.72 398zm-137.2-99.34c34.17 38.37 83.78 60.25 137.2 60.25s103-21.88 137.21-60.25V117.14H39.52zM0 0h351.12v40.94H0z"></path></svg></span></button></div><a class="it-Actions_jumpToCommentButton" href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#comments"><div class="it-Actions_commentCount">1</div><div class="fa fa-fw fa-comment"></div></a><div class="it-Actions_shareButton it-Actions_shareButton-twitter"><span class="fa fa-twitter"></span></div><div class="it-Actions_shareButton it-Actions_shareButton-facebook"><span class="fa fa-facebook"></span></div></div><div class="p-items_main"><div class="p-items_article"><div class="it-Header"><div class="u-flex-center-between mb-3"><div class="it-Header_info"><div class="it-Header_author"><a href="https://qiita.com/akito1986"><img src="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws.com_0_46472_profile-images_1473690659" alt="akito1986" class="it-Header_authorImage"></a><a href="https://qiita.com/akito1986" class="it-Header_authorName">@<!-- -->akito1986</a></div><div class="it-Header_time"><span title="2014年08月13日に投稿" class=""><meta content="2014-08-13T14:19:14Z"><time datetime="2014-08-13T14:25:53Z">2014年08月13日に更新</time></span></div><div class="it-Header_meta"><div class="it-Header_manipulate"><div class="it-Header_dropdown"><span class="it-Header_dropdownToggle" tabindex="0"><span class="fa fa-ellipsis-h fa-lg"></span></span><div class="st-Dropdown right"><div><div class="it-Header_dropdown-title">記事の改善</div><a class="st-Dropdown_item" href="https://qiita.com/drafts/4c83ff492ed4b390ad50/edit"><span class="fa fa-fw fa-code-fork pr-1"></span>編集リクエストを送る</a><div class="st-Dropdown_separator"></div></div><div class="it-Header_dropdown-title">記事の情報</div><a class="st-Dropdown_item" href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50/revisions"><span class="fa fa-fw fa-history pr-1"></span>編集履歴</a><a class="st-Dropdown_item" href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50/patches"><span class="fa fa-fw fa-inbox pr-1"></span>編集リクエスト一覧</a><a class="st-Dropdown_item" href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50/likers"><span style="margin-right:4px"><svg size="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392.81 429" color="#777" class="VerticalLgtmIcon__Lgtm-sc-19v9h1n-0 pFoNU"><path d="M14.19 5.4h53.86v149.45h90.05v44.87H14.19zM288.4 93.77h100.79q1.29 25-5.66 45.39a96.79 96.79 0 01-20.33 34.89 92 92 0 01-32.13 22.45 104 104 0 01-40.95 7.93 109.71 109.71 0 01-76-29.92 104.05 104.05 0 01-23-32.56 95.46 95.46 0 01-8.47-39.88 94.78 94.78 0 018.47-39.87 104.38 104.38 0 0123-32.42A107.71 107.71 0 01248.23 8a110.79 110.79 0 01118.48 22.49l-35.07 35.08a51.25 51.25 0 00-17.75-15 52.83 52.83 0 00-44.67-1.23 52.92 52.92 0 00-17 12 57.07 57.07 0 00-11.45 18.11 60 60 0 00-4.23 22.77 60 60 0 004.23 22.68 56.57 56.57 0 0011.45 18.19 52.62 52.62 0 0017 12 50.5 50.5 0 0020.9 4.36q20.19 0 31.07-7.51a35.75 35.75 0 0014.46-20.55h-47.39zM51.29 279.55H0v-44.86h156v44.86h-51.13V429H51.29zM283.36 381.71l-41.72-62V429h-53.86V234.69h47.47L290 312l55.9-77.29h46.9V429h-53.86V320.27l-42.43 61.44z"></path></svg></span>LGTMしたユーザ一覧</a><a class="st-Dropdown_item" href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50.md"><span class="fa fa-fw fa-file-text-o pr-1"></span>Markdown で本文を見る</a><div class="st-Dropdown_separator"></div><div class="st-Dropdown_item"><span class="fa fa-fw fa-flag pr-1"></span>問題がある記事を報告する</div></div></div></div><div class="st-Modal"><div class="st-Modal_backdrop"></div><div class="st-Modal_body"><form><div class="st-Form"><span class="st-Form_label">この記事にどのような問題がありますか？</span></div><div class="st-Form"><label><input type="radio" name="reason" value="illegal" required="">法律違反（著作権侵害、プライバシー侵害、名誉棄損等）</label></div><div class="st-Form"><label><input type="radio" name="reason" value="inappropriate_content" required="">社会的に不適切（公序良俗に反する）</label></div><div class="st-Form"><label><input type="radio" name="reason" value="advertising" required="">宣伝行為</label></div><div class="st-Form"><label><input type="radio" name="reason" value="spam" required="">スパムの疑い</label></div><div class="st-Form"><label><input type="radio" name="reason" value="guideline_violation" required="">上記以外だが、Qiitaのコミュニティにふさわしくない（ガイドライン違反）</label></div><div class="st-Form st-Form-right"><input type="submit" class="st-Form_submit" value="送信"></div></form></div></div></div></div></div><h1 class="it-Header_title">TreasureData使ってみた</h1><div class="it-Tags"><a href="https://qiita.com/tags/log" class="it-Tags_item"><span>log</span></a><a href="https://qiita.com/tags/treasuredata" class="it-Tags_item"><span>TreasureData</span></a></div></div><div class="it-DeprecationAlert_five mb-5 p-2"><span class="fa fa-warning mr-1"></span>この記事は最終更新日から5年以上が経過しています。</div><section class="it-MdContent"><div id="personal-public-article-body"><div><p>treasuredataを使ってみたのでメモメモ。</p>
+
+<h2>
+<span id="背景" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E8%83%8C%E6%99%AF"><i class="fa fa-link"></i></a>背景</h2>
+
+<p>使う契機とは直接関係はないけどログについて、色々思うところがあった。</p>
+
+<p>色々思うところとは・・・</p>
+
+<ul>
+<li>ログは重要</li>
+<li>ログは管理が大変</li>
+<li>ログは消したくない</li>
+<li>ログのフォーマットは変更されやすい</li>
+</ul>
+
+<p>である。</p>
+
+<p>「ログは重要」は、アプリケーションエンジニアのみならず情報系のエンジニアなら同意してくれると思う。<br>
+「えっこれ動かないんだけど？」って言われたときにまず見るのがログだもの。</p>
+
+<p>「ログは管理が大変」は「ログは重要」のためもあるのだが、重要だからこそ消したくなく、どんどん増え続けてしまいディスクがいっぱいになっても、消したくないからテープに書き出し保存するってことが往々にしてある。</p>
+
+<p>「ログは消したくない」は「ログは管理が大変」で記載してしまった。。。</p>
+
+<p>「ログのフォーマットは変更されやすい」は、まあシステムをステップ開発する場合は往々にしてある。システムに対する習熟度が上がるとフォーマットも変えたくなる。</p>
+
+<p>S3とかのクラウドストレージに入れればええやん？とかも思ったけど、問題発生時にはログを手元にもってきて、ログ解析・・・億劫と思ってしまう自分がいた。</p>
+
+<p>まあそんな中、真剣に何かを使いたいと思っていたわけではないのだけど縁があってTreasureDataを使う機会があったので、主にログ管理システムとしてどうなんだろうと思って触ってみたので、備忘のためにメモしておく。</p>
+
+<p>今回は環境準備まで。</p>
+
+<p>以下環境情報。</p>
+
+<ul>
+<li>ubuntu: 12.04</li>
+<li>ruby: 2.1.2p95</li>
+<li>rubygem: 2.2.2</li>
+</ul>
+
+<h2>
+<span id="treasuredataとは" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#treasuredata%E3%81%A8%E3%81%AF"><i class="fa fa-link"></i></a>TreasureDataとは</h2>
+
+<p>wikiとかあればいいんだけど無さげなので、一言で言うとクラウド上にあるデータベースと思ってもらえればいい気がする。ただ大容量データを解析するためにクエリはHadoop使えまっせって感じ。</p>
+
+<h2>
+<span id="signup" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#signup"><i class="fa fa-link"></i></a>SignUp</h2>
+
+<p>AWS上にある<a href="https://console.treasuredata.com/users/sign_up" rel="nofollow noopener" target="_blank">WebConsole</a>で無料でサインアップができ、早速使い始められる。</p>
+
+<p><a href="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws.com_0_46472_cd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png" target="_blank" rel="nofollow noopener"><img src="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws.com_0_46472_cd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png" alt="td_signup.png" title="td_signup.png" data-canonical-src="https://qiita-image-store.s3.amazonaws.com/0/46472/cd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png" srcset="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fcd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;w=1400&amp;fit=max&amp;s=00367a9935bd6dd6f343e79c0e04cff5 1x" loading="lazy"></a></p>
+
+<h2>
+<span id="apiキーの取得" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#api%E3%82%AD%E3%83%BC%E3%81%AE%E5%8F%96%E5%BE%97"><i class="fa fa-link"></i></a>APIキーの取得</h2>
+
+<p>アプリケーションから利用するために必要なAPIキーを取っておく。<br>
+WebConsoleからログイン後、<br>
+<a href="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws.com_0_46472_5cd69e77-1c32-c915-ec7d-be7c6561e591.png" target="_blank" rel="nofollow noopener"><img src="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws.com_0_46472_5cd69e77-1c32-c915-ec7d-be7c6561e591.png" alt="td_signin.png" title="td_signin.png" data-canonical-src="https://qiita-image-store.s3.amazonaws.com/0/46472/5cd69e77-1c32-c915-ec7d-be7c6561e591.png" srcset="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2F5cd69e77-1c32-c915-ec7d-be7c6561e591.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;w=1400&amp;fit=max&amp;s=80ba58eae838f2ff796d58edae9399de 1x" loading="lazy"></a></p>
+
+<p>画面右上のプルダウンメニュから<code>My Profile</code>を選択。</p>
+
+<p><a href="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws.com_0_46472_d8e02fee-8354-547c-01c4-b22c0ae7126c.png" target="_blank" rel="nofollow noopener"><img src="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws.com_0_46472_d8e02fee-8354-547c-01c4-b22c0ae7126c.png" alt="td_get_apikey.png" title="td_get_apikey.png" data-canonical-src="https://qiita-image-store.s3.amazonaws.com/0/46472/d8e02fee-8354-547c-01c4-b22c0ae7126c.png" srcset="https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fd8e02fee-8354-547c-01c4-b22c0ae7126c.png?ixlib=rb-1.2.2&amp;auto=format&amp;gif-q=60&amp;q=75&amp;w=1400&amp;fit=max&amp;s=463a366b7a4374b04aba2ff782a7aac5 1x" loading="lazy"></a></p>
+
+<p><code>My Profile</code>画面で<code>API Keys</code>のテキストボックスに<code>my_td_password</code>を入力後<code>Show Keys</code>タブを選択する。</p>
+
+<p>そうするとAPIキーが表示されるのでメモしておく。</p>
+
+<h2>
+<span id="treasuredata-tool-beltのインストール" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#treasuredata-tool-belt%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><i class="fa fa-link"></i></a>TreasureData Tool Beltのインストール</h2>
+
+<p>Tool Beltって一般的なのかな？まあRubyBaseのCLIのクライアントツールである。<br>
+WebConsoleでもログのアップロードやクエリを投げられるけど、基本はこのTool BeltやJDBC、RestAPI経由で使うと思う。</p>
+
+<p>以下のコマンドで<code>TD Tool Belt</code>をインストールする。</p>
+
+<div class="code-frame" data-lang="cmd">
+<div class="code-lang"><span class="bold">install_td</span></div>
+<div class="code-copy"><div class="code-copy__message" style="display: none;">Copied!</div><button class="code-copy__button" style="display: none;"><span class="fa fa-fw fa-clipboard"></span></button></div><div class="highlight"><pre>$ gem install td
+$ td --version
+0.11.3
+$ 
+</pre></div>
+</div>
+
+<h2>
+<span id="使ってみる" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B"><i class="fa fa-link"></i></a>使ってみる</h2>
+
+<h3>
+<span id="環境変数設定" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E8%A8%AD%E5%AE%9A"><i class="fa fa-link"></i></a>環境変数設定</h3>
+
+<p>以下のコマンドでTreasureDataのAPIエンドポイントを指定する。</p>
+
+<div class="code-frame" data-lang="cmd">
+<div class="code-lang"><span class="bold">set_env</span></div>
+<div class="code-copy"><div class="code-copy__message" style="display: none;">Copied!</div><button class="code-copy__button" style="display: none;"><span class="fa fa-fw fa-clipboard"></span></button></div><div class="highlight"><pre>$ export TD_API_SERVER=https://api.treasuredata.com
+$ env | grep TD
+TD_API_SERVER=https://api.treasuredata.com
+</pre></div>
+</div>
+
+<h3>
+<span id="ログイン" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3"><i class="fa fa-link"></i></a>ログイン</h3>
+
+<p><code>TD Tool Belt</code>経由でTreasureDataにログインする。</p>
+
+<div class="code-frame" data-lang="cmd">
+<div class="code-lang"><span class="bold">login_td</span></div>
+<div class="code-copy"><div class="code-copy__message" style="display: none;">Copied!</div><button class="code-copy__button" style="display: none;"><span class="fa fa-fw fa-clipboard"></span></button></div><div class="highlight"><pre>$ td account -f
+Enter your Treasure Data credentials.
+Email: ${my_addr}
+Password (typing will be hidden): ${my_passwd} 
+Authenticated successfully.
+Use 'td db:create &lt;db_name&gt;' to create a database.
+$
+</pre></div>
+</div>
+
+<h3>
+<span id="クエリ実行" class="fragment"></span><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E3%82%AF%E3%82%A8%E3%83%AA%E5%AE%9F%E8%A1%8C"><i class="fa fa-link"></i></a>クエリ実行</h3>
+
+<p>TreasureDataではサンプルデータが用意されている。</p>
+
+<div class="code-frame" data-lang="cmd">
+<div class="code-lang"><span class="bold">td_db</span></div>
+<div class="code-copy"><div class="code-copy__message" style="display: none;">Copied!</div><button class="code-copy__button" style="display: none;"><span class="fa fa-fw fa-clipboard"></span></button></div><div class="highlight"><pre>$ td db:list # DB一覧表示
++-------------+-------+
+| Name        | Count |
++-------------+-------+
+| sample_db   | 5000  |
++-------------+-------+
+1 rows in set
+$ td table:list sample_db # テーブル一覧表示
++-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+
+| Database  | Table      | Type | Count | Size   | Last import               | Last log timestamp        | Schema                                                                                                   |
++-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+
+| sample_db | www_access | log  | 5,000 | 0.0 GB | 2014-03-14 01:12:32 +0900 | 2013-09-07 10:13:45 +0900 | host:string, path:string, method:string, referer:string, code:long, agent:string, user:string, size:long |
++-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+
+1 row in set
+$
+</pre></div>
+</div>
+
+<p><code>sample_db.www_access</code>のレコード数を取得するクエリを以下で実行することができる。</p>
+
+<div class="code-frame" data-lang="cmd">
+<div class="code-lang"><span class="bold">td_query</span></div>
+<div class="code-copy"><div class="code-copy__message" style="display: none;">Copied!</div><button class="code-copy__button" style="display: none;"><span class="fa fa-fw fa-clipboard"></span></button></div><div class="highlight"><pre>$ td query -w -t hive -d sample_db "SELECT COUNT(1) FROM www_access"
+Job 13623610 is queued.
+Use 'td job:show 13623610' to show the status.
+queued...
+  started at 2014-08-13T14:15:54Z
+  14/08/13 14:16:00 WARN conf.Configuration: org.apache.hadoop.hive.conf.LoopingByteArrayInputStream@5adeeabd:an attempt to override final parameter: mapreduce.input.fileinputformat.split.minsize;  Ignoring.
+  Hive history file=/mnt/hive/tmp/4115/hive_job_log_e8d443fc-5e93-4ff0-a53a-983786540afc_1000320679.txt
+  Total jobs = 1
+  Launching Job 1 out of 1
+  Number of reduce tasks determined at compile time: 1
+  In order to change the average load for a reducer (in bytes):
+    set hive.exec.reducers.bytes.per.reducer=&lt;number&gt;
+  In order to limit the maximum number of reducers:
+    set hive.exec.reducers.max=&lt;number&gt;
+  In order to set a constant number of reducers:
+    set mapreduce.job.reduces=&lt;number&gt;
+  **
+  ** WARNING: time index filtering is not set!
+  ** This query could be very slow as a result.
+  ** Please see http://docs.treasure-data.com/articles/performance-tuning#leveraging-time-based-partitioning
+  **
+  Starting Job = job_1407740893231_6027, Tracking URL = http://ip-10-145-145-114.ec2.internal:8088/proxy/application_1407740893231_6027/
+  Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1407740893231_6027
+  Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+  2014-08-13 14:16:13,982 Stage-1 map = 0%,  reduce = 0%
+  2014-08-13 14:16:21,301 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 12.64 sec
+  2014-08-13 14:16:27,550 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 14.66 sec
+  finished at 2014-08-13T14:16:31Z
+  MapReduce Total cumulative CPU time: 14 seconds 660 msec
+  Ended Job = job_1407740893231_6027
+  MapReduce Jobs Launched: 
+  Job 0: Map: 1  Reduce: 1   Cumulative CPU: 14.66 sec   HDFS Read: 2574 HDFS Write: 104 SUCCESS
+  Total MapReduce CPU Time Spent: 14 seconds 660 msec
+  OK
+  MapReduce time taken: 24.295 seconds
+  Fetching results...
+  Total CPU Time: 14660
+  Time taken: 24.663 seconds
+Status     : success
+Result     :
+WARNING: the job result is being downloaded...: 24 B / 100.0%                                                                                                   +------+                                          
+| _c0  |
++------+
+| 5000 |
++------+
+1 row in set
+$
+</pre></div>
+</div>
+
+<p>データ件数が5000件あることがわかる。そして裏では<code>map reduces</code>処理がはしっているっぽいことがわかる。</p>
+
+<p>データインポート部分については次回！！</p>
+</div></div></section><div class="it-Footer"><div class="it-Footer_actions"><div class="it-Footer_editRequest"><a href="https://qiita.com/drafts/4c83ff492ed4b390ad50/edit" class="u-link-no-underline"><span>編集リクエスト</span></a></div><div class="it-Footer_stock"><button><svg size="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353.02 398" class="StockIcon__Stock-cq5opj-0 fEysOa"><path d="M176.72 398c-67.52 0-130.16-29-171.84-79.69l-4.46-5.42V78.05H353v234.84l-4.45 5.42C306.88 369 244.24 398 176.72 398zm-137.2-99.34c34.17 38.37 83.78 60.25 137.2 60.25s103-21.88 137.21-60.25V117.14H39.52zM0 0h351.12v40.94H0z"></path></svg><span class="it-Footer_stockLabel">ストック</span></button></div><div class="it-Footer_like" title="Looks Good To Me!"><button style="background-color:#fff"><span style="width:100%;height:100%;display:flex;align-items:center;justify-content:center"><svg size="56" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 564.81 145.68" color="#55C500" class="LgtmIcon__Lgtm-sc-1e4ee48-0 ZHnTl"><path d="M0 3.85h38.39v106.5h64.16v32H0zM195.41 66.82h71.82q.91 17.84-4 32.35A68.89 68.89 0 01248.71 124a65.49 65.49 0 01-22.9 16 74.08 74.08 0 01-29.17 5.65 78.16 78.16 0 01-54.17-21.32 74.1 74.1 0 01-16.42-23.21 68.08 68.08 0 01-6-28.41 67.7 67.7 0 016-28.42 74.44 74.44 0 0116.42-23.1 76.37 76.37 0 0124.32-15.52 78.92 78.92 0 0184.43 16.06l-25 25A36.52 36.52 0 00213.57 36a37.65 37.65 0 00-31.83-.87 37.7 37.7 0 00-12.08 8.57 40.75 40.75 0 00-8.17 12.91 42.8 42.8 0 00-3 16.22 42.91 42.91 0 003 16.17 40.44 40.44 0 008.17 13 37.4 37.4 0 0012.08 8.57 36.07 36.07 0 0014.9 3.11q14.38 0 22.13-5.35a25.46 25.46 0 0010.31-14.65h-33.77zM319.44 36.21h-36.55v-32h111.18v32h-36.45v106.5h-38.18zM486.82 109l-29.73-44.18v77.89H418.7V4.24h33.83l39 55.09 39.86-55.09h33.42v138.47h-38.38V65.23L496.19 109z"></path></svg></span></button><a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50/likers" class="it-Footer_likeCount">13</a></div></div><div class="it-Footer_social"><div class="it-Footer_shareButton it-Footer_shareButton-twitter"><span class="fa fa-twitter"></span></div><div class="it-Footer_shareButton it-Footer_shareButton-facebook"><span class="fa fa-facebook"></span></div></div></div><div class="ai-Container"><div class="ai-User"><a href="https://qiita.com/akito1986"><img src="./TreasureData使ってみた - Qiita_files/https___qiita-image-store.s3.amazonaws(1).com_0_46472_profile-images_1473690659" alt="akito1986" class="ai-User_image"></a><div class="ai-User_body"><div class="ai-User_header"><a href="https://qiita.com/akito1986" class="ai-User_name"></a><a href="https://qiita.com/akito1986" class="ai-User_urlname">@<!-- -->akito1986</a></div><div class="ai-User_description"></div><div class="ai-User_footer"><button class="UserFollowButton-sc-1hmm0rc-0 iytOeR">フォロー</button></div></div></div></div><div class="apm-Content"><div class="apm-Content_title">ユーザー登録して、Qiitaをもっと便利に使ってみませんか。</div><ol class="apm-Content_list"><li>あなたにマッチした記事をお届けします<div class="description">ユーザーやタグをフォローすることで、あなたが興味を持つ技術分野の情報をまとめてキャッチアップできます</div></li><li>便利な情報をあとで効率的に読み返せます<div class="description">気に入った記事を「ストック」することで、あとからすぐに検索できます</div></li><div><a class="apm-Content_help" href="https://help.qiita.com/ja/articles/qiita-login-user" target="_blank"><i class="fa fa-fw fa-arrow-circle-right"></i>より詳しく</a></div></ol><a href="https://qiita.com/signup?callback_action=login_or_signup&amp;redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50&amp;realm=qiita" class="apm-Content_button apm-Content_button-signup">登録する</a><a href="https://qiita.com/login?callback_action=login_or_signup&amp;redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50&amp;realm=qiita" class="apm-Content_button apm-Content_button-signin">ログインする</a></div><div><div class="it-Ads_afterBodyContainer it-Ads_afterBodyContainer-wide mt-3"><div class="it-Ads_afterBodyWrapper"><div id="dfp-slot-article-after-body-for-pc-left" class="ad-336x280" data-test-adunitpath="/383564218/qiita.com_items-show_under-article-left" elementtiming="gpt-dfp-slot-article-after-body-for-pc-left" data-testid="ArticleAdsAfterBody_AdUnit" data-google-query-id="CMWNlMXh0esCFYXVvAodIU8Img"><div id="google_ads_iframe_/383564218/qiita.com_items-show_under-article-left_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_items-show_under-article-left_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_items-show_under-article-left_0" width="336" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./TreasureData使ってみた - Qiita_files/saved_resource(2).html"></iframe></div></div></div><div class="it-Ads_afterBodyWrapper"><div id="dfp-slot-article-after-body-for-pc-right" class="ad-336x280" data-test-adunitpath="/383564218/qiita.com_items-show_under-article-right" elementtiming="gpt-dfp-slot-article-after-body-for-pc-right" data-testid="ArticleAdsAfterBody_AdUnit" data-google-query-id="CNH_qsXh0esCFc8avAodfi0JPw"><div id="google_ads_iframe_/383564218/qiita.com_items-show_under-article-right_0__container__" style="border: 0pt none; display: inline-block; width: 336px; height: 280px;"><iframe frameborder="0" src="./TreasureData使ってみた - Qiita_files/container.html" id="google_ads_iframe_/383564218/qiita.com_items-show_under-article-right_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="336" height="280" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div></div></div></div></div></div><div class="p-items_options"><div class="mt-2"><div id="dfp-slot-article-sidebar-top" class="ad-300x250" data-test-adunitpath="/383564218/qiita.com_items-show_sidebar-top" elementtiming="gpt-dfp-slot-article-sidebar-top" data-testid="ArticleAdsSidebarTop_AdUnit" data-google-query-id="CPPQucXh0esCFQdAwgUdFNALZA"><div id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-top_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"><iframe frameborder="0" src="./TreasureData使ってみた - Qiita_files/container(1).html" id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-top_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="3" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div></div></div><div class="p-items_toc"><div class="mt-2"><div id="dfp-slot-article-sidebar-bottom" class="ad-300x250" data-test-adunitpath="/383564218/qiita.com_items-show_sidebar-bottom" elementtiming="gpt-dfp-slot-article-sidebar-bottom" data-testid="ArticleAdsSidebarBottom_AdUnit" data-google-query-id="CMnHysXh0esCFYQbvAod1C4C7A"><div id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-bottom_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-bottom_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_items-show_sidebar-bottom_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="4" data-load-complete="true" src="./TreasureData使ってみた - Qiita_files/saved_resource(3).html"></iframe></div></div></div><div class="it-Toc"><div class="it-Toc_nav"><ul>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E8%83%8C%E6%99%AF" class="">背景</a>
+</li>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#treasuredata%E3%81%A8%E3%81%AF" class="">TreasureDataとは</a>
+</li>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#signup" class="">SignUp</a>
+</li>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#api%E3%82%AD%E3%83%BC%E3%81%AE%E5%8F%96%E5%BE%97" class="">APIキーの取得</a>
+</li>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#treasuredata-tool-belt%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" class="">TreasureData Tool Beltのインストール</a>
+</li>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B" class="">使ってみる</a>
+<ul>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E8%A8%AD%E5%AE%9A" class="">環境変数設定</a>
+</li>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3" class="">ログイン</a>
+</li>
+<li>
+<a href="https://qiita.com/akito1986/items/4c83ff492ed4b390ad50#%E3%82%AF%E3%82%A8%E3%83%AA%E5%AE%9F%E8%A1%8C" class="focus">クエリ実行</a>
+</li>
+</ul>
+</li>
+</ul>
+</div></div></div></div></div><div class="p-items_wrapper p-items_wrapper-white"><div class="p-items_container"><div class="p-items_leftDummy"></div><div class="p-items_main"><div class="p-items_aside px-5 p-2@s"><div id="logly-lift-4279493"><div class="tl-DummyItemList p-2"><div class="tl-DummyItemList_content tl-DummyItem"><div class="tl-DummyItem_image mr-1"></div><div class="tl-DummyItem_body"><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div></div></div><div class="tl-DummyItemList_content tl-DummyItem"><div class="tl-DummyItem_image mr-1"></div><div class="tl-DummyItem_body"><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div></div></div><div class="tl-DummyItemList_content tl-DummyItem"><div class="tl-DummyItem_image mr-1"></div><div class="tl-DummyItem_body"><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div></div></div><div class="tl-DummyItemList_content tl-DummyItem"><div class="tl-DummyItem_image mr-1"></div><div class="tl-DummyItem_body"><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div></div></div><div class="tl-DummyItemList_content tl-DummyItem"><div class="tl-DummyItem_image mr-1"></div><div class="tl-DummyItem_body"><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div><div class="tl-DummyItem_text mb-1"></div></div></div></div></div></div><div class="p-items_aside mt-5 px-5 p-2@s"></div><div></div><div class="p-items_aside mt-6 px-5 p-2@s" id="comments-wrapper"><div id="comments" class="co-ItemWrapper"><div class="co-ItemWrapper_title mb-2"><span class="fa fa-comments mr-1"></span>コメント</div><div class="mb-4">この記事にコメントはありません。</div><div class="co-AnonymousForm p-3"><div class="co-AnonymousForm_title mb-1">あなたもコメントしてみませんか :)</div><a href="https://qiita.com/signup?callback_action=login_or_signup&amp;redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50&amp;realm=qiita" class="co-AnonymousForm_signup">ユーザ登録</a><div class="co-AnonymousForm_sub mt-1">すでにアカウントを持っている方は<a href="https://qiita.com/login?callback_action=login_or_signup&amp;redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50&amp;realm=qiita" class="co-AnonymousForm_login">ログイン</a></div></div></div></div></div><div class="p-items_rightDummy"></div></div></div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="PersonalArticlePage" data-dom-id="PersonalArticlePage-react-component-6f8949ea-d4d5-443c-8c28-d339c0191142">{"article":{"body":"\u003cp\u003etreasuredataを使ってみたのでメモメモ。\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\"背景\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#%E8%83%8C%E6%99%AF\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e背景\u003c/h2\u003e\n\n\u003cp\u003e使う契機とは直接関係はないけどログについて、色々思うところがあった。\u003c/p\u003e\n\n\u003cp\u003e色々思うところとは・・・\u003c/p\u003e\n\n\u003cul\u003e\n\u003cli\u003eログは重要\u003c/li\u003e\n\u003cli\u003eログは管理が大変\u003c/li\u003e\n\u003cli\u003eログは消したくない\u003c/li\u003e\n\u003cli\u003eログのフォーマットは変更されやすい\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003cp\u003eである。\u003c/p\u003e\n\n\u003cp\u003e「ログは重要」は、アプリケーションエンジニアのみならず情報系のエンジニアなら同意してくれると思う。\u003cbr\u003e\n「えっこれ動かないんだけど？」って言われたときにまず見るのがログだもの。\u003c/p\u003e\n\n\u003cp\u003e「ログは管理が大変」は「ログは重要」のためもあるのだが、重要だからこそ消したくなく、どんどん増え続けてしまいディスクがいっぱいになっても、消したくないからテープに書き出し保存するってことが往々にしてある。\u003c/p\u003e\n\n\u003cp\u003e「ログは消したくない」は「ログは管理が大変」で記載してしまった。。。\u003c/p\u003e\n\n\u003cp\u003e「ログのフォーマットは変更されやすい」は、まあシステムをステップ開発する場合は往々にしてある。システムに対する習熟度が上がるとフォーマットも変えたくなる。\u003c/p\u003e\n\n\u003cp\u003eS3とかのクラウドストレージに入れればええやん？とかも思ったけど、問題発生時にはログを手元にもってきて、ログ解析・・・億劫と思ってしまう自分がいた。\u003c/p\u003e\n\n\u003cp\u003eまあそんな中、真剣に何かを使いたいと思っていたわけではないのだけど縁があってTreasureDataを使う機会があったので、主にログ管理システムとしてどうなんだろうと思って触ってみたので、備忘のためにメモしておく。\u003c/p\u003e\n\n\u003cp\u003e今回は環境準備まで。\u003c/p\u003e\n\n\u003cp\u003e以下環境情報。\u003c/p\u003e\n\n\u003cul\u003e\n\u003cli\u003eubuntu: 12.04\u003c/li\u003e\n\u003cli\u003eruby: 2.1.2p95\u003c/li\u003e\n\u003cli\u003erubygem: 2.2.2\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003ch2\u003e\n\u003cspan id=\"treasuredataとは\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#treasuredata%E3%81%A8%E3%81%AF\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003eTreasureDataとは\u003c/h2\u003e\n\n\u003cp\u003ewikiとかあればいいんだけど無さげなので、一言で言うとクラウド上にあるデータベースと思ってもらえればいい気がする。ただ大容量データを解析するためにクエリはHadoop使えまっせって感じ。\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\"signup\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#signup\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003eSignUp\u003c/h2\u003e\n\n\u003cp\u003eAWS上にある\u003ca href=\"https://console.treasuredata.com/users/sign_up\" rel=\"nofollow noopener\" target=\"_blank\"\u003eWebConsole\u003c/a\u003eで無料でサインアップができ、早速使い始められる。\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fcd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;s=fedd6d911e2d81c5d2c0b84c77a00adb\" target=\"_blank\" rel=\"nofollow noopener\"\u003e\u003cimg src=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fcd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;s=fedd6d911e2d81c5d2c0b84c77a00adb\" alt=\"td_signup.png\" title=\"td_signup.png\" data-canonical-src=\"https://qiita-image-store.s3.amazonaws.com/0/46472/cd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png\" srcset=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fcd86c3dc-ff0a-5dd2-b86f-cc5c2a550692.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;w=1400\u0026amp;fit=max\u0026amp;s=00367a9935bd6dd6f343e79c0e04cff5 1x\" loading=\"lazy\"\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\"apiキーの取得\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#api%E3%82%AD%E3%83%BC%E3%81%AE%E5%8F%96%E5%BE%97\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003eAPIキーの取得\u003c/h2\u003e\n\n\u003cp\u003eアプリケーションから利用するために必要なAPIキーを取っておく。\u003cbr\u003e\nWebConsoleからログイン後、\u003cbr\u003e\n\u003ca href=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2F5cd69e77-1c32-c915-ec7d-be7c6561e591.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;s=da5516e219e534e3b5c83d1ea3e06d81\" target=\"_blank\" rel=\"nofollow noopener\"\u003e\u003cimg src=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2F5cd69e77-1c32-c915-ec7d-be7c6561e591.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;s=da5516e219e534e3b5c83d1ea3e06d81\" alt=\"td_signin.png\" title=\"td_signin.png\" data-canonical-src=\"https://qiita-image-store.s3.amazonaws.com/0/46472/5cd69e77-1c32-c915-ec7d-be7c6561e591.png\" srcset=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2F5cd69e77-1c32-c915-ec7d-be7c6561e591.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;w=1400\u0026amp;fit=max\u0026amp;s=80ba58eae838f2ff796d58edae9399de 1x\" loading=\"lazy\"\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003e画面右上のプルダウンメニュから\u003ccode\u003eMy Profile\u003c/code\u003eを選択。\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fd8e02fee-8354-547c-01c4-b22c0ae7126c.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;s=034aa6f104267eee36720c69b34dbf6e\" target=\"_blank\" rel=\"nofollow noopener\"\u003e\u003cimg src=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fd8e02fee-8354-547c-01c4-b22c0ae7126c.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;s=034aa6f104267eee36720c69b34dbf6e\" alt=\"td_get_apikey.png\" title=\"td_get_apikey.png\" data-canonical-src=\"https://qiita-image-store.s3.amazonaws.com/0/46472/d8e02fee-8354-547c-01c4-b22c0ae7126c.png\" srcset=\"https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fd8e02fee-8354-547c-01c4-b22c0ae7126c.png?ixlib=rb-1.2.2\u0026amp;auto=format\u0026amp;gif-q=60\u0026amp;q=75\u0026amp;w=1400\u0026amp;fit=max\u0026amp;s=463a366b7a4374b04aba2ff782a7aac5 1x\" loading=\"lazy\"\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003ccode\u003eMy Profile\u003c/code\u003e画面で\u003ccode\u003eAPI Keys\u003c/code\u003eのテキストボックスに\u003ccode\u003emy_td_password\u003c/code\u003eを入力後\u003ccode\u003eShow Keys\u003c/code\u003eタブを選択する。\u003c/p\u003e\n\n\u003cp\u003eそうするとAPIキーが表示されるのでメモしておく。\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\"treasuredata-tool-beltのインストール\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#treasuredata-tool-belt%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003eTreasureData Tool Beltのインストール\u003c/h2\u003e\n\n\u003cp\u003eTool Beltって一般的なのかな？まあRubyBaseのCLIのクライアントツールである。\u003cbr\u003e\nWebConsoleでもログのアップロードやクエリを投げられるけど、基本はこのTool BeltやJDBC、RestAPI経由で使うと思う。\u003c/p\u003e\n\n\u003cp\u003e以下のコマンドで\u003ccode\u003eTD Tool Belt\u003c/code\u003eをインストールする。\u003c/p\u003e\n\n\u003cdiv class=\"code-frame\" data-lang=\"cmd\"\u003e\n\u003cdiv class=\"code-lang\"\u003e\u003cspan class=\"bold\"\u003einstall_td\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre\u003e$ gem install td\n$ td --version\n0.11.3\n$ \n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003ch2\u003e\n\u003cspan id=\"使ってみる\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e使ってみる\u003c/h2\u003e\n\n\u003ch3\u003e\n\u003cspan id=\"環境変数設定\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E8%A8%AD%E5%AE%9A\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e環境変数設定\u003c/h3\u003e\n\n\u003cp\u003e以下のコマンドでTreasureDataのAPIエンドポイントを指定する。\u003c/p\u003e\n\n\u003cdiv class=\"code-frame\" data-lang=\"cmd\"\u003e\n\u003cdiv class=\"code-lang\"\u003e\u003cspan class=\"bold\"\u003eset_env\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre\u003e$ export TD_API_SERVER=https://api.treasuredata.com\n$ env | grep TD\nTD_API_SERVER=https://api.treasuredata.com\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003ch3\u003e\n\u003cspan id=\"ログイン\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003eログイン\u003c/h3\u003e\n\n\u003cp\u003e\u003ccode\u003eTD Tool Belt\u003c/code\u003e経由でTreasureDataにログインする。\u003c/p\u003e\n\n\u003cdiv class=\"code-frame\" data-lang=\"cmd\"\u003e\n\u003cdiv class=\"code-lang\"\u003e\u003cspan class=\"bold\"\u003elogin_td\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre\u003e$ td account -f\nEnter your Treasure Data credentials.\nEmail: ${my_addr}\nPassword (typing will be hidden): ${my_passwd} \nAuthenticated successfully.\nUse 'td db:create \u0026lt;db_name\u0026gt;' to create a database.\n$\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003ch3\u003e\n\u003cspan id=\"クエリ実行\" class=\"fragment\"\u003e\u003c/span\u003e\u003ca href=\"#%E3%82%AF%E3%82%A8%E3%83%AA%E5%AE%9F%E8%A1%8C\"\u003e\u003ci class=\"fa fa-link\"\u003e\u003c/i\u003e\u003c/a\u003eクエリ実行\u003c/h3\u003e\n\n\u003cp\u003eTreasureDataではサンプルデータが用意されている。\u003c/p\u003e\n\n\u003cdiv class=\"code-frame\" data-lang=\"cmd\"\u003e\n\u003cdiv class=\"code-lang\"\u003e\u003cspan class=\"bold\"\u003etd_db\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre\u003e$ td db:list # DB一覧表示\n+-------------+-------+\n| Name        | Count |\n+-------------+-------+\n| sample_db   | 5000  |\n+-------------+-------+\n1 rows in set\n$ td table:list sample_db # テーブル一覧表示\n+-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+\n| Database  | Table      | Type | Count | Size   | Last import               | Last log timestamp        | Schema                                                                                                   |\n+-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+\n| sample_db | www_access | log  | 5,000 | 0.0 GB | 2014-03-14 01:12:32 +0900 | 2013-09-07 10:13:45 +0900 | host:string, path:string, method:string, referer:string, code:long, agent:string, user:string, size:long |\n+-----------+------------+------+-------+--------+---------------------------+---------------------------+----------------------------------------------------------------------------------------------------------+\n1 row in set\n$\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cp\u003e\u003ccode\u003esample_db.www_access\u003c/code\u003eのレコード数を取得するクエリを以下で実行することができる。\u003c/p\u003e\n\n\u003cdiv class=\"code-frame\" data-lang=\"cmd\"\u003e\n\u003cdiv class=\"code-lang\"\u003e\u003cspan class=\"bold\"\u003etd_query\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\"highlight\"\u003e\u003cpre\u003e$ td query -w -t hive -d sample_db \"SELECT COUNT(1) FROM www_access\"\nJob 13623610 is queued.\nUse 'td job:show 13623610' to show the status.\nqueued...\n  started at 2014-08-13T14:15:54Z\n  14/08/13 14:16:00 WARN conf.Configuration: org.apache.hadoop.hive.conf.LoopingByteArrayInputStream@5adeeabd:an attempt to override final parameter: mapreduce.input.fileinputformat.split.minsize;  Ignoring.\n  Hive history file=/mnt/hive/tmp/4115/hive_job_log_e8d443fc-5e93-4ff0-a53a-983786540afc_1000320679.txt\n  Total jobs = 1\n  Launching Job 1 out of 1\n  Number of reduce tasks determined at compile time: 1\n  In order to change the average load for a reducer (in bytes):\n    set hive.exec.reducers.bytes.per.reducer=\u0026lt;number\u0026gt;\n  In order to limit the maximum number of reducers:\n    set hive.exec.reducers.max=\u0026lt;number\u0026gt;\n  In order to set a constant number of reducers:\n    set mapreduce.job.reduces=\u0026lt;number\u0026gt;\n  **\n  ** WARNING: time index filtering is not set!\n  ** This query could be very slow as a result.\n  ** Please see http://docs.treasure-data.com/articles/performance-tuning#leveraging-time-based-partitioning\n  **\n  Starting Job = job_1407740893231_6027, Tracking URL = http://ip-10-145-145-114.ec2.internal:8088/proxy/application_1407740893231_6027/\n  Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1407740893231_6027\n  Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1\n  2014-08-13 14:16:13,982 Stage-1 map = 0%,  reduce = 0%\n  2014-08-13 14:16:21,301 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 12.64 sec\n  2014-08-13 14:16:27,550 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 14.66 sec\n  finished at 2014-08-13T14:16:31Z\n  MapReduce Total cumulative CPU time: 14 seconds 660 msec\n  Ended Job = job_1407740893231_6027\n  MapReduce Jobs Launched: \n  Job 0: Map: 1  Reduce: 1   Cumulative CPU: 14.66 sec   HDFS Read: 2574 HDFS Write: 104 SUCCESS\n  Total MapReduce CPU Time Spent: 14 seconds 660 msec\n  OK\n  MapReduce time taken: 24.295 seconds\n  Fetching results...\n  Total CPU Time: 14660\n  Time taken: 24.663 seconds\nStatus     : success\nResult     :\nWARNING: the job result is being downloaded...: 24 B / 100.0%                                                                                                   +------+                                          \n| _c0  |\n+------+\n| 5000 |\n+------+\n1 row in set\n$\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cp\u003eデータ件数が5000件あることがわかる。そして裏では\u003ccode\u003emap reduces\u003c/code\u003e処理がはしっているっぽいことがわかる。\u003c/p\u003e\n\n\u003cp\u003eデータインポート部分については次回！！\u003c/p\u003e\n","createdAt":"2014-08-13T14:19:14Z","elapsedYearsFromUpdatedAt":6,"encryptedId":"JUgLUsv7TV0qMhnP2iEZ3op5B2nd0q12--AVJ0Hfto1Sn5fHBa--vk+EDGM0+FxCsOkdYOmsCA==","isBanned":false,"isDeprecated":true,"isDestroyableByViewer":false,"isEditRequestSendableByViewer":true,"isLikableByViewer":true,"isLikedByViewer":false,"isPublic":true,"isSlide":false,"isStockableByViewer":true,"isStockedByViewer":false,"isUpdatableByViewer":false,"isSubscribableByViewer":false,"isSubscribedByViewer":false,"isUpdated":true,"likesCount":13,"originalId":110496,"title":"TreasureData使ってみた","toc":"\u003cul\u003e\n\u003cli\u003e\n\u003ca href=\"#%E8%83%8C%E6%99%AF\"\u003e背景\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#treasuredata%E3%81%A8%E3%81%AF\"\u003eTreasureDataとは\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#signup\"\u003eSignUp\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#api%E3%82%AD%E3%83%BC%E3%81%AE%E5%8F%96%E5%BE%97\"\u003eAPIキーの取得\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#treasuredata-tool-belt%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB\"\u003eTreasureData Tool Beltのインストール\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B\"\u003e使ってみる\u003c/a\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003ca href=\"#%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E8%A8%AD%E5%AE%9A\"\u003e環境変数設定\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3\"\u003eログイン\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#%E3%82%AF%E3%82%A8%E3%83%AA%E5%AE%9F%E8%A1%8C\"\u003eクエリ実行\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n","totalPv":10732,"updatedAt":"2014-08-13T14:25:53Z","uuid":"4c83ff492ed4b390ad50","banReason":null,"adventCalendarItem":null,"author":{"originalId":46472,"description":null,"name":"","profileImageUrl":"https://qiita-image-store.s3.amazonaws.com/0/46472/profile-images/1473690659","profileImageUrlW48":"https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fprofile-images%2F1473690659?ixlib=rb-1.2.2\u0026auto=compress%2Cformat\u0026lossless=0\u0026w=48\u0026s=59883705c71155312c9cdf27aa90c696","profileImageUrlW75":"https://qiita-user-profile-images.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F46472%2Fprofile-images%2F1473690659?ixlib=rb-1.2.2\u0026auto=compress%2Cformat\u0026lossless=0\u0026w=75\u0026s=301375ae01b544ba92f0ce74db1d8460","urlName":"akito1986","isBlockingViewer":false,"isFollowedByViewer":false,"isFollowableByViewer":true,"websiteUrl":null,"organizations":{"edges":[]}},"tags":[{"name":"log","urlName":"log"},{"name":"TreasureData","urlName":"treasuredata"}],"followingLikers":{"edges":[]},"comments":{"totalCount":1},"organization":null},"viewer":null,"analyticsTrackingId":null}</script>
+      
+<script src="./TreasureData使ってみた - Qiita_files/td_qt_access.js.ダウンロード" type="text/javascript"></script><script>microadTd.QT.start({"article_category": "log,TreasureData"})</script><script>(function(d,u){var b=d.getElementsByTagName("script")[0],j=d.createElement("script");j.async=true;j.src=u;b.parentNode.insertBefore(j,b);})(document,"//img.ak.impact-ad.jp/ut/ff9a3577423c8ed5_4330.js");</script><noscript><iframe frameborder="0" height="0" src="//nspt.unitag.jp/ff9a3577423c8ed5_4330.php" width="0"></iframe></noscript><script async="" src="./TreasureData使ってみた - Qiita_files/js(2)"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'AW-878053044');</script><script>!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1792588824374455');
+fbq('track', 'PageView');</script><noscript><img height="1" src="https://www.facebook.com/tr?id=1792588824374455&amp;ev=PageView&amp;noscript=1" style="display:none" width="1" /></noscript><footer id="globalFooter" class="st-Footer"><div class="st-Footer_container"><div class="st-Footer_start"><div class="st-Footer_logo"><svg viewBox="0 0 426.57 130" xmlns="http://www.w3.org/2000/svg"><circle cx="167.08" cy="21.4" r="12.28"></circle><path d="M250.81 29.66h23.48v18.9h-23.48z"></path><path d="M300.76 105.26a22.23 22.23 0 01-6.26-.86 12.68 12.68 0 01-5.17-3 14.41 14.41 0 01-3.56-5.76 28 28 0 01-1.3-9.22V48.56h29.61v-18.9h-29.52V3.29h-20.17v83.34q0 11.16 2.83 18.27a27.71 27.71 0 007.7 11.2 26.86 26.86 0 0011.43 5.62 47.56 47.56 0 0012.34 1.53h15.16v-18zM0 61.7a58.6 58.6 0 015-24.21A62.26 62.26 0 0118.73 17.9 63.72 63.72 0 0139 4.78 64.93 64.93 0 0164 0a65 65 0 0124.85 4.78 64.24 64.24 0 0120.38 13.12A62 62 0 01123 37.49a58.6 58.6 0 015 24.21 58.34 58.34 0 01-4 21.46 62.8 62.8 0 01-10.91 18.16l11.1 11.1a10.3 10.3 0 010 14.52 10.29 10.29 0 01-14.64 0l-12.22-12.41a65 65 0 01-15.78 6.65 66.32 66.32 0 01-17.55 2.3 64.63 64.63 0 01-45.23-18A62.82 62.82 0 015 85.81 58.3 58.3 0 010 61.7zm21.64.08a43.13 43.13 0 0012.42 30.63 42.23 42.23 0 0013.43 9.09A41.31 41.31 0 0064 104.8a42 42 0 0030-12.39 42.37 42.37 0 009-13.64 43.43 43.43 0 003.3-17 43.77 43.77 0 00-3.3-17A41.7 41.7 0 0080.55 22 41.78 41.78 0 0064 18.68 41.31 41.31 0 0047.49 22a42.37 42.37 0 00-13.43 9.08 43.37 43.37 0 00-12.42 30.7zM331.89 78a47.59 47.59 0 013.3-17.73 43.22 43.22 0 019.34-14.47A44.25 44.25 0 01359 36a47.82 47.82 0 0118.81-3.58 42.72 42.72 0 019.26 1 46.5 46.5 0 018.22 2.58 40 40 0 017 3.84 44.39 44.39 0 015.71 4.63l1.22-9.47h17.35v85.83h-17.35l-1.17-9.42a42.54 42.54 0 01-5.84 4.67 43.11 43.11 0 01-7 3.79 44.86 44.86 0 01-8.17 2.59 43 43 0 01-9.22 1A47.94 47.94 0 01359 119.9a43.3 43.3 0 01-14.47-9.71 44.17 44.17 0 01-9.34-14.47 47 47 0 01-3.3-17.72zm20.27-.08a29.16 29.16 0 002.17 11.34 27 27 0 005.92 8.88 26.69 26.69 0 008.76 5.76 29.19 29.19 0 0021.44 0 26.11 26.11 0 008.72-5.76 27.57 27.57 0 005.88-8.84 29 29 0 002.16-11.38 28.62 28.62 0 00-2.16-11.22 26.57 26.57 0 00-5.93-8.8 27.68 27.68 0 00-19.51-7.9 28.29 28.29 0 00-10.77 2.05 26.19 26.19 0 00-8.71 5.75 27.08 27.08 0 00-5.84 8.8 28.94 28.94 0 00-2.13 11.31zm-194.97-30.5h19.78v73.54h-19.78zm49.25 0h19.78v73.54h-19.78z"></path><circle cx="216.33" cy="21.4" r="12.28"></circle></svg></div><div class="st-Footer_catchcopy">How developers code is here.</div><div class="st-Footer_socials"><a class="fa fa-twitter" href="https://twitter.com/qiita"></a><a class="fa fa-facebook-square" href="https://www.facebook.com/qiita/"></a></div></div><div class="st-Footer_end"><div class="st-Footer_qiita"><div class="st-Footer_label">Qiita</div><div class="st-Footer_list"><div class="st-Footer_column"><a href="https://qiita.com/about">About</a><a href="https://qiita.com/terms">利用規約</a><a href="https://qiita.com/privacy">プライバシー</a><a target="_blank" href="http://help.qiita.com/ja/articles/qiita-community-guideline">ガイドライン</a><a href="https://qiita.com/release-notes">リリース</a></div><div class="st-Footer_column"><a href="https://qiita.com/api/v2/docs">API</a><a href="https://qiita.com/feedback/new">ご意見</a><a href="https://help.qiita.com/">ヘルプ</a><a target="_blank" href="https://qiita.com/ads?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=footer">広告掲載</a></div></div></div><div class="st-Footer_increments"><div class="st-Footer_label">Increments</div><div class="st-Footer_list"><div class="st-Footer_column"><a href="https://increments.co.jp/company/">About</a><a href="https://increments.co.jp/jobs/">採用情報</a><a href="https://blog.qiita.com/">ブログ</a></div><div class="st-Footer_column"><a href="https://teams.qiita.com/">Qiita Team</a><a href="https://jobs.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=footer">Qiita Jobs</a><a href="https://zine.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=footer">Qiita Zine</a></div></div></div></div></div><div class="st-Footer_copyright">© 2011-2020 Increments Inc.</div></footer><div id="Snackbar-react-component-be9bd3e1-fdb1-4915-8eb3-62553e3d9aa1"></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="Snackbar" data-dom-id="Snackbar-react-component-be9bd3e1-fdb1-4915-8eb3-62553e3d9aa1">{}</script>
+      
+<div id="LoginModal-react-component-89831fce-634d-4e06-8998-df8a4ee893e6"><div class="st-Modal"><div class="st-Modal_backdrop"></div><div class="st-Modal_body lm-Dialog"><div class="fa fa-times lm-Dialog_close"></div><div class="lm-Dialog_title">ユーザー登録して、Qiitaをもっと便利に使ってみませんか。</div><div class="lm-Dialog_message-pc">この機能を利用するにはログインする必要があります。ログインするとさらに便利にQiitaを利用できます。</div><div class="lm-Dialog_message-mobile">この機能を利用するにはログインする必要があります。ログインするとさらに便利にQiitaを利用できます。</div><ol class="lm-Dialog_list"><li>あなたにマッチした記事をお届けします<div class="description">ユーザーやタグをフォローすることで、あなたが興味を持つ技術分野の情報をまとめてキャッチアップできます</div></li><li>便利な情報をあとで効率的に読み返せます<div class="description">気に入った記事を「ストック」することで、あとからすぐに検索できます</div></li></ol><a href="https://qiita.com/signup?callback_action=login_or_signup&amp;redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50&amp;realm=qiita" class="lm-Dialog_button lm-Dialog_button-signup">登録する</a><a href="https://qiita.com/login?callback_action=login_or_signup&amp;redirect_to=%2Fakito1986%2Fitems%2F4c83ff492ed4b390ad50&amp;realm=qiita" class="lm-Dialog_button lm-Dialog_button-signin">ログインする</a></div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="LoginModal" data-dom-id="LoginModal-react-component-89831fce-634d-4e06-8998-df8a4ee893e6">{}</script>
+      
+<div id="UserHoverCard-react-component-4b4bc763-ec70-4a2f-b62a-f2920769239a"><div class="uh-Container" style="left:0px;top:0px"><div>ユーザーは見つかりませんでした</div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="UserHoverCard" data-dom-id="UserHoverCard-react-component-4b4bc763-ec70-4a2f-b62a-f2920769239a">{}</script>
+      
+</div><script type="text/javascript" charset="UTF-8">!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["blockEvents","unblockEvents","setSignedMode","setAnonymousMode","resetUUID","addRecord","fetchGlobalID","set","trackEvent","trackPageview","trackClicks","ready"],n=0;n<s.length;n++){var c=s[n];e[t].prototype[c]=r(c)}var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/2.1/td.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)}}("Treasure",this);</script><script type="text/javascript" charset="UTF-8" src="./TreasureData使ってみた - Qiita_files/aid"></script><img width="0px" height="0px" src="./TreasureData使ってみた - Qiita_files/tr" style="display: none;"><div id="dataContainer" style="display: none;" data-config="{&quot;actionPath&quot;:&quot;public/items#show&quot;,&quot;settings&quot;:{&quot;analyticsTrackingId&quot;:&quot;UA-24675221-12&quot;,&quot;assetsMap&quot;:{},&quot;csrfToken&quot;:&quot;1FwmxMixcVBxSLIF2PTE5opnRM6cKM03OGkqky26ststiTGToJwHKma9MC9JWHh1K1yvUhhEuKk1gjgx7Yh3Hg==&quot;,&quot;locale&quot;:&quot;ja&quot;},&quot;currentUser&quot;:null}"><script type="application/json" data-js-react-on-rails-store="AppStore">{"snackbar":{"type":"","body":"","isActive":false}}</script></div><div id="itm_4330" style="visibility: hidden; display: none;"></div><iframe id="aopb_ff9a3577423c8ed5" frameborder="0" scrolling="no" width="1" height="1" style="display: none" src="./TreasureData使ってみた - Qiita_files/pb.html"></iframe><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="./TreasureData使ってみた - Qiita_files/adsct" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-58Z82M');</script><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./TreasureData使ってみた - Qiita_files/activityi.html"></iframe><img src="./TreasureData使ってみた - Qiita_files/rep" style="display: none;"><div style="display: none; visibility: hidden;"><iframe src="./TreasureData使ってみた - Qiita_files/activityi(1).html" width="1" height="1" frameborder="0" style="display:none"></iframe></div><div style="display: none; visibility: hidden;"><iframe src="./TreasureData使ってみた - Qiita_files/activityi(2).html" width="1" height="1" frameborder="0" style="display:none"></iframe></div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nv2kc",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","809797712462041");fbq("track","PageView");</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nxmb9");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","996402550503199");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","954575148009345");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","437265843064161");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw0lq",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw1xy",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw9n2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","262978464137256");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","256605841418458");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","386990638325508");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxlif",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxlih",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxyp7",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("ny46g",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1733466696949178");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","ny5vy");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">var _fout_queue=_fout_queue||{};void 0===_fout_queue.segment&&(_fout_queue.segment={});void 0===_fout_queue.segment.queue&&(_fout_queue.segment.queue=[]);_fout_queue.segment.queue.push({user_id:19972,advertiser_id:6796,contractor_id:5});(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://":"http://")+"js.fout.jp/segmentation.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+        </div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4740006retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813012retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813013retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813014retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4815034retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4815035retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813015retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2040876882868599");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1469129556533591");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5053023retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5054022retargeting"});</script>
+<script src="./TreasureData使ってみた - Qiita_files/tfa.js.ダウンロード"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">var _fout_queue=_fout_queue||{};void 0===_fout_queue.segment&&(_fout_queue.segment={});void 0===_fout_queue.segment.queue&&(_fout_queue.segment.queue=[]);_fout_queue.segment.queue.push({user_id:21947,advertiser_id:8063,contractor_id:5});(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://":"http://")+"js.fout.jp/segmentation.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+        
+        </div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("c2e22923c3676a816c61d14d","PageView");</script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nzdtr");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nziop",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("4fc5ab48b835653a76f95b96","PageView");</script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nznn0",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nznn2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nzu0q");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;"><script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nve3t");twq("track","PageView");</script></div><div style="display: none; visibility: hidden;"><script type="text/javascript" language="javascript">var yahoo_retargeting_id="USSDKFK3A8",yahoo_retargeting_label="",yahoo_retargeting_page_type="",yahoo_retargeting_items=[{item_id:"",category_id:"",price:"",quantity:""}];</script>
+<script type="text/javascript" language="javascript" src="./TreasureData使ってみた - Qiita_files/s_retargeting.js.ダウンロード"></script></div><div style="display: none; visibility: hidden;">
+<script src="./TreasureData使ってみた - Qiita_files/oct.js.ダウンロード" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("o03ez",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o058w");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o0jpn");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">(function(d,g,h,l,e,k,c,a,b,f){a=(d[e]||(d[e]={}))[k]||(d[e][k]={});a[c]||(a[c]=function(){(a[c+"_queue"]||(a[c+"_queue"]=[])).push(arguments)},b=g.createElement(h),b.charset="utf-8",b.async=!0,b.src=l,f=g.getElementsByTagName(h)[0],f.parentNode.insertBefore(b,f))})(window,document,"script","https://cd.ladsp.com/script/pixel2.js","Smn","Logicad","pixel");Smn.Logicad.pixel({smnAdvertiserId:"00010559"});</script></div><div style="display: none; visibility: hidden;">
+
+<script>(function(a,b,d){a._ltq=a._ltq||[];a._lt=a._lt||function(){a._ltq.push(arguments)};var e="https:"===location.protocol?"https://d.line-scdn.net":"http://d.line-cdn.net",c=b.createElement("script");c.async=1;c.src=d||e+"/n/line_tag/public/release/v1/lt.js";b=b.getElementsByTagName("script")[0];b.parentNode.insertBefore(c,b)})(window,document);_lt("init",{customerType:"lap",tagId:"0eae3c8c-4d76-4bed-ba44-6b29e627c570"});_lt("send","pv",["0eae3c8c-4d76-4bed-ba44-6b29e627c570"]);</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script async="null" src="./TreasureData使ってみた - Qiita_files/ytag.js.ダウンロード"></script>
+<script>window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"yss_retargeting",config:{yahoo_ss_retargeting_id:"1001117028",yahoo_sstag_custom_params:{}}});</script></div><div style="display: none; visibility: hidden;"><script async="null" src="./TreasureData使ってみた - Qiita_files/ytag.js.ダウンロード"></script>
+<script>window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"yjad_retargeting",config:{yahoo_retargeting_id:"L7W82OXY21",yahoo_retargeting_label:""}});</script></div><div style="display: none; visibility: hidden;"><script async="null" src="./TreasureData使ってみた - Qiita_files/ytag.js.ダウンロード"></script>
+<script>window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"ycl_cookie"});</script></div><script src="./TreasureData使ってみた - Qiita_files/adsct(1)" type="text/javascript"></script><iframe id="google_osd_static_frame_5788409045146" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./TreasureData使ってみた - Qiita_files/saved_resource(4).html"></iframe><script src="./TreasureData使ってみた - Qiita_files/adsct(2)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(4)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(5)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(6)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(7)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(8)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(9)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(10)" type="text/javascript"></script><iframe src="./TreasureData使ってみた - Qiita_files/beacon.html" style="display: none;"></iframe><script src="./TreasureData使ってみた - Qiita_files/adsct(11)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(12)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(13)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(14)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(15)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(16)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(17)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(18)" type="text/javascript"></script><script src="./TreasureData使ってみた - Qiita_files/adsct(19)" type="text/javascript"></script><iframe src="./TreasureData使ってみた - Qiita_files/iframe.html" width="1" height="1" style="display: none;"></iframe></body></html>
